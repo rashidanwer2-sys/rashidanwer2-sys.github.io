@@ -3,133 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rashid Anwer — Salesforce Marketing Cloud Professional with 9+ years of experience in journeys, automation, personalization, data, integrations and campaign delivery." />
+  <meta name="description" content="Rashid Anwer — SFMC Professional with 9+ years of experience in Salesforce Marketing Cloud." />
   <title>Rashid Anwer | SFMC Professional</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="mouse-glow" id="mouseGlow"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
 
-  <header class="site-header">
+  <header class="header">
     <div class="container nav-wrap">
-      <a class="brand" href="#home" aria-label="Rashid Anwer home">
-        <span class="brand-cloud" aria-hidden="true">
-          <svg viewBox="0 0 64 40"><path d="M18 34h30c8 0 14-5 14-12s-6-12-14-12h-1C44 4 39 1 33 1 25 1 19 6 17 12h-2C7 12 1 17 1 24s6 10 17 10z"/></svg>
+      <a href="#home" class="brand" aria-label="Home">
+        <span class="cloud-logo">
+          <svg viewBox="0 0 64 40" aria-hidden="true">
+            <path d="M18 34h30c8 0 14-5 14-12s-6-12-14-12h-1C44 4 39 1 33 1 25 1 19 6 17 12h-2C7 12 1 17 1 24s6 10 17 10z"/>
+          </svg>
         </span>
-        <span class="brand-copy">
+        <span>
           <strong>Rashid Anwer</strong>
           <small>SFMC Professional</small>
         </span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" id="mainNav">
+      <nav id="mainNav" class="nav">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#experience">Experience</a>
         <a href="#stack">Skills</a>
-        <a href="#contact" class="nav-pill">Get in Touch</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-bg-grid"></div>
-      <div class="hero-ring ring-one"></div>
-      <div class="hero-ring ring-two"></div>
+      <div class="hero-grid-bg"></div>
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
 
-      <div class="container hero-grid">
+      <div class="container hero-layout">
         <div class="hero-copy reveal">
           <span class="eyebrow">Salesforce Marketing Cloud</span>
           <h1>Turning Data into <span>Meaningful Connections</span></h1>
-
-          <p class="hero-subtitle">SFMC Professional with 9+ Years of Experience</p>
+          <p class="hero-role">SFMC Professional with 9+ Years of Experience</p>
           <p class="hero-text">
-            I design and deliver scalable Salesforce Marketing Cloud solutions across
-            customer journeys, automation, personalization, segmentation, integrations
-            and campaign execution.
+            I help businesses create scalable, personalized customer journeys using Salesforce Marketing Cloud —
+            from architecture and campaign execution to automation, personalization, integrations and optimization.
           </p>
 
           <div class="hero-actions">
-            <a href="#contact" class="button button-cyan">Let's Work Together</a>
-            <a href="#experience" class="button button-ghost">View My Work</a>
+            <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+            <a href="#experience" class="btn btn-outline">View My Work</a>
           </div>
 
           <div class="hero-stats">
-            <div>
-              <strong>9+</strong>
-              <span>Years Experience</span>
-            </div>
-            <div>
-              <strong>7x</strong>
-              <span>Salesforce Certified</span>
-            </div>
-            <div>
-              <strong>End-to-End</strong>
-              <span>SFMC Delivery</span>
-            </div>
+            <div><strong>9+</strong><span>Years Experience</span></div>
+            <div><strong>7x</strong><span>Salesforce Certified</span></div>
+            <div><strong>End-to-End</strong><span>SFMC Expertise</span></div>
           </div>
 
-          <div class="hero-script">Customer journeys. Real impact.</div>
+          <div class="hand-note">Customer journeys. Real impact.</div>
         </div>
 
-        <div class="journey-scene reveal" id="journeyScene">
-          <div class="scene-shell">
-            <div class="window-top">
-              <div class="window-dots"><i></i><i></i><i></i></div>
+        <div class="hero-visual reveal" id="heroVisual">
+          <div class="journey-window">
+            <div class="journey-titlebar">
+              <div class="dots"><i></i><i></i><i></i></div>
               <span>Customer Journey</span>
-              <div class="mini-cloud">
+              <div class="cloud-mini">
                 <svg viewBox="0 0 64 40"><path d="M18 34h30c8 0 14-5 14-12s-6-12-14-12h-1C44 4 39 1 33 1 25 1 19 6 17 12h-2C7 12 1 17 1 24s6 10 17 10z"/></svg>
               </div>
             </div>
 
-            <div class="journey-row">
-              <div class="journey-node">
-                <span class="product-icon green">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M5 19c1-5 4-8 7-8s6 3 7 8"/></svg>
-                </span>
-                <small>Audience</small>
-              </div>
-              <div class="journey-arrow"><i></i></div>
-              <div class="journey-node">
-                <span class="product-icon purple">
-                  <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m4 7 8 6 8-6"/></svg>
-                </span>
-                <small>Email Studio</small>
-              </div>
-              <div class="journey-arrow"><i></i></div>
-              <div class="journey-node">
-                <span class="product-icon orange">
-                  <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5c0 3.8 5 9 5 9s5-5.2 5-9a5 5 0 0 0-5-5zm0 7.1A2.1 2.1 0 1 1 12 5a2.1 2.1 0 0 1 0 4.1z"/></svg>
-                </span>
-                <small>Journey Builder</small>
-              </div>
-              <div class="journey-arrow"><i></i></div>
-              <div class="journey-node">
-                <span class="product-icon green">
-                  <svg viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6.5 6.5l2.7 2.7m5.6 5.6 2.7 2.7M17.5 6.5l-2.7 2.7m-5.6 5.6-2.7 2.7"/><circle cx="12" cy="12" r="3.2"/></svg>
-                </span>
-                <small>Automation Studio</small>
-              </div>
-              <div class="journey-arrow"><i></i></div>
-              <div class="journey-node">
-                <span class="product-icon blue">
-                  <svg viewBox="0 0 24 24"><path d="M4 12 20 4l-5 16-4-6z"/></svg>
-                </span>
-                <small>Send</small>
-              </div>
+            <div class="journey-flow">
+              <div class="j-node"><span class="icon green">👥</span><small>Audience</small></div>
+              <div class="j-line"><i></i></div>
+              <div class="j-node"><span class="icon purple">✉</span><small>Email Studio</small></div>
+              <div class="j-line"><i></i></div>
+              <div class="j-node"><span class="icon orange">◆</span><small>Journey Builder</small></div>
+              <div class="j-line"><i></i></div>
+              <div class="j-node"><span class="icon green">⚙</span><small>Automation Studio</small></div>
+              <div class="j-line"><i></i></div>
+              <div class="j-node"><span class="icon blue">➤</span><small>Send</small></div>
             </div>
 
-            <div class="code-card">
-              <div class="code-label">AMPscript</div>
+            <div class="code-panel">
+              <div class="code-head">AMPscript</div>
               <pre><code>%%[
 SET @firstName = AttributeValue("FirstName")
 IF NOT EMPTY(@firstName) THEN
@@ -141,260 +106,155 @@ ENDIF
             </div>
           </div>
 
-          <div class="scene-badge badge-journey">
-            <span class="product-icon orange">
-              <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5c0 3.8 5 9 5 9s5-5.2 5-9a5 5 0 0 0-5-5zm0 7.1A2.1 2.1 0 1 1 12 5a2.1 2.1 0 0 1 0 4.1z"/></svg>
-            </span>
-            <span>Journey Builder</span>
-          </div>
+          <div class="float-card fc-journey"><span class="icon orange">◆</span><span>Journey Builder</span></div>
+          <div class="float-card fc-auto"><span class="icon green">⚙</span><span>Automation Studio</span></div>
+          <div class="float-card fc-email"><span class="icon purple">✉</span><span>Email Studio</span></div>
+          <div class="float-card fc-amp"><span class="icon violet">&lt;/&gt;</span><span>AMPscript</span></div>
+          <div class="float-card fc-sql"><span class="icon indigo">DB</span><span>SQL</span></div>
 
-          <div class="scene-badge badge-auto">
-            <span class="product-icon green">
-              <svg viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6.5 6.5l2.7 2.7m5.6 5.6 2.7 2.7M17.5 6.5l-2.7 2.7m-5.6 5.6-2.7 2.7"/><circle cx="12" cy="12" r="3.2"/></svg>
-            </span>
-            <span>Automation Studio</span>
-          </div>
-
-          <div class="scene-badge badge-email">
-            <span class="product-icon purple">
-              <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m4 7 8 6 8-6"/></svg>
-            </span>
-            <span>Email Studio</span>
-          </div>
-
-          <div class="scene-badge badge-amp">
-            <span class="product-icon violet">
-              <svg viewBox="0 0 24 24"><path d="m8 6-5 6 5 6M16 6l5 6-5 6M13.5 4l-3 16"/></svg>
-            </span>
-            <span>AMPscript</span>
-          </div>
-
-          <div class="scene-badge badge-sql">
-            <span class="product-icon indigo">
-              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
-            </span>
-            <span>SQL</span>
-          </div>
-
-          <svg class="scene-connectors" viewBox="0 0 700 540" aria-hidden="true">
-            <path d="M330 50 C330 120 330 120 360 150"/>
-            <path d="M610 120 C560 150 540 180 520 215"/>
-            <path d="M90 295 C150 300 170 300 205 310"/>
-            <path d="M625 300 C585 315 570 330 550 350"/>
-            <path d="M485 495 C450 460 430 440 405 420"/>
+          <svg class="float-lines" viewBox="0 0 700 540" aria-hidden="true">
+            <path d="M320 45 C335 90 345 115 360 150"/>
+            <path d="M610 95 C560 125 545 160 525 205"/>
+            <path d="M80 285 C140 285 175 290 210 305"/>
+            <path d="M630 285 C595 310 580 335 555 360"/>
+            <path d="M500 510 C465 470 445 445 410 420"/>
           </svg>
 
-          <div class="scene-note">Automate. Personalize. Optimize.</div>
+          <div class="visual-note">Automate. Personalize. Optimize.</div>
         </div>
       </div>
     </section>
 
-    <section class="section white-section" id="about">
-      <div class="container about-grid">
+    <section class="section about" id="about">
+      <div class="container about-layout">
         <div class="about-copy reveal">
-          <span class="section-kicker">About Me</span>
+          <span class="section-label">About Me</span>
           <h2>Solving Real Business Challenges with Salesforce Marketing Cloud</h2>
           <p class="lead">
-            I’m an SFMC professional with 9+ years of hands-on experience in
-            designing, building and improving enterprise marketing solutions.
+            I’m an SFMC professional with 9+ years of hands-on experience in development,
+            automation and data-driven marketing solutions.
           </p>
           <p>
-            My work connects customer data, campaign execution, lifecycle automation,
-            personalization, integrations and technical governance — turning requirements
-            into dependable solutions that can scale.
+            I specialize in designing, building and optimizing customer journeys, integrations,
+            segmentation, personalization and technical delivery across SFMC.
           </p>
         </div>
 
-        <div class="white-visual-zone reveal">
-          <div class="data-card">
-            <span class="data-title">From Data to Lifelong Customers</span>
-            <div class="data-flow">
-              <div class="data-node"><b>01</b><span>Data</span></div>
-              <div class="data-arrow"><i></i></div>
-              <div class="data-node"><b>02</b><span>Segment</span></div>
-              <div class="data-arrow"><i></i></div>
-              <div class="data-node"><b>03</b><span>Personalize</span></div>
-              <div class="data-arrow"><i></i></div>
-              <div class="data-node"><b>04</b><span>Automate</span></div>
-              <div class="data-arrow"><i></i></div>
-              <div class="data-node"><b>05</b><span>Engage</span></div>
+        <div class="about-visual reveal">
+          <div class="about-card">
+            <h3>From Data to Lifelong Customers</h3>
+            <div class="about-flow">
+              <div class="af-node"><b>01</b><span>Data</span></div>
+              <div class="af-line"><i></i></div>
+              <div class="af-node"><b>02</b><span>Segment</span></div>
+              <div class="af-line"><i></i></div>
+              <div class="af-node"><b>03</b><span>Personalize</span></div>
+              <div class="af-line"><i></i></div>
+              <div class="af-node"><b>04</b><span>Automate</span></div>
+              <div class="af-line"><i></i></div>
+              <div class="af-node"><b>05</b><span>Engage</span></div>
             </div>
           </div>
-
-          <div class="white-badge white-badge-one">Journey Builder</div>
-          <div class="white-badge white-badge-two">Automation Studio</div>
-          <div class="white-badge white-badge-three">AMPscript</div>
+          <div class="about-note">Right data. Right message. Real results.</div>
         </div>
       </div>
     </section>
 
-    <section class="section soft-section" id="services">
+    <section class="section services" id="services">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="section-kicker">My Services</span>
+            <span class="section-label">My Services</span>
             <h2>End-to-End SFMC Solutions</h2>
           </div>
-          <p>From strategy to execution, I support the complete SFMC delivery lifecycle.</p>
+          <p>From strategy to execution, I help businesses unlock the full potential of Salesforce Marketing Cloud.</p>
         </div>
 
         <div class="services-grid">
-          <article class="service-card tilt reveal">
-            <div class="service-icon blue">
-              <svg viewBox="0 0 24 24"><path d="M4 18c4-8 8-12 16-14-2 8-6 12-14 16z"/><path d="m9 15 6-6"/></svg>
-            </div>
-            <h3>Strategy & Architecture</h3>
-            <p>Roadmaps, technical design, governance and scalable implementation approaches.</p>
-          </article>
-
-          <article class="service-card tilt reveal">
-            <div class="service-icon orange">
-              <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5c0 3.8 5 9 5 9s5-5.2 5-9a5 5 0 0 0-5-5zm0 7.1A2.1 2.1 0 1 1 12 5a2.1 2.1 0 0 1 0 4.1z"/></svg>
-            </div>
-            <h3>Journey Builder</h3>
-            <p>Multi-step journeys, decision splits, triggers, testing and journey optimization.</p>
-          </article>
-
-          <article class="service-card tilt reveal">
-            <div class="service-icon green">
-              <svg viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6.5 6.5l2.7 2.7m5.6 5.6 2.7 2.7M17.5 6.5l-2.7 2.7m-5.6 5.6-2.7 2.7"/><circle cx="12" cy="12" r="3.2"/></svg>
-            </div>
-            <h3>Automation Studio</h3>
-            <p>Triggered and recurring workflows, imports, extracts, SQL activities and scheduling.</p>
-          </article>
-
-          <article class="service-card tilt reveal">
-            <div class="service-icon purple">
-              <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m4 7 8 6 8-6"/></svg>
-            </div>
-            <h3>Email Studio</h3>
-            <p>Responsive templates, personalization, QA, A/B testing and campaign execution.</p>
-          </article>
-
-          <article class="service-card tilt reveal">
-            <div class="service-icon cyan">
-              <svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="12" cy="16" r="4"/><path d="M3 20c1-4 3-6 5-6M21 20c-1-4-3-6-5-6"/></svg>
-            </div>
-            <h3>Audience & Segmentation</h3>
-            <p>Data Extensions, segmentation logic, imports and reusable audience preparation.</p>
-          </article>
-
-          <article class="service-card tilt reveal">
-            <div class="service-icon violet">
-              <svg viewBox="0 0 24 24"><path d="m8 6-5 6 5 6M16 6l5 6-5 6M13.5 4l-3 16"/></svg>
-            </div>
-            <h3>AMPscript & SSJS</h3>
-            <p>Dynamic content, personalized logic, reusable scripting and server-side solutions.</p>
-          </article>
-
-          <article class="service-card tilt reveal">
-            <div class="service-icon indigo">
-              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
-            </div>
-            <h3>SQL & Data Extensions</h3>
-            <p>Queries, transformations, data modelling, segmentation and campaign-ready datasets.</p>
-          </article>
-
-          <article class="service-card tilt reveal">
-            <div class="service-icon teal">
-              <svg viewBox="0 0 24 24"><path d="M8 12h8M12 8v8"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/></svg>
-            </div>
-            <h3>Reporting & Analytics</h3>
-            <p>Campaign reporting, data analysis, performance tracking and actionable insights.</p>
-          </article>
+          <article class="service-card tilt reveal"><div class="service-icon blue">✦</div><h3>Strategy & Architecture</h3><p>Roadmaps, solution design, governance and scalable implementation approaches.</p></article>
+          <article class="service-card tilt reveal"><div class="service-icon orange">◆</div><h3>Journey Builder</h3><p>Multi-step journeys, triggers, decision splits, testing and optimization.</p></article>
+          <article class="service-card tilt reveal"><div class="service-icon green">⚙</div><h3>Automation Studio</h3><p>Triggered and recurring automation, SQL activities, imports, extracts and scheduling.</p></article>
+          <article class="service-card tilt reveal"><div class="service-icon purple">✉</div><h3>Email Studio</h3><p>Responsive email development, dynamic content, QA and campaign execution.</p></article>
+          <article class="service-card tilt reveal"><div class="service-icon cyan">👥</div><h3>Audience Builder</h3><p>Segmentation, Data Extensions, imports and reusable audience logic.</p></article>
+          <article class="service-card tilt reveal"><div class="service-icon violet">&lt;/&gt;</div><h3>AMPscript & SSJS</h3><p>Dynamic personalization, reusable logic and server-side scripting solutions.</p></article>
+          <article class="service-card tilt reveal"><div class="service-icon indigo">DB</div><h3>SQL & Data Extensions</h3><p>Queries, transformations, segmentation logic and campaign-ready datasets.</p></article>
+          <article class="service-card tilt reveal"><div class="service-icon blue">▥</div><h3>Reporting & Analytics</h3><p>Campaign reporting, data analysis, optimization and technical insights.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section white-section" id="experience">
-      <div class="container experience-grid">
+    <section class="section experience" id="experience">
+      <div class="container experience-layout">
         <div class="experience-copy reveal">
-          <span class="section-kicker">My Experience</span>
+          <span class="section-label">My Experience</span>
           <h2>What I’ve Worked On</h2>
-          <p>A practical overview of the SFMC work I’ve delivered across the ecosystem.</p>
+          <p>A practical overview of the work I’ve delivered across the SFMC ecosystem.</p>
 
           <div class="experience-list">
-            <div>End-to-end customer journeys and lifecycle automation</div>
-            <div>Journey Builder setup, testing and optimization</div>
-            <div>Automation Studio workflows and scheduled processing</div>
-            <div>Email and campaign development</div>
-            <div>AMPscript and SSJS personalization</div>
-            <div>SQL queries, Data Extensions and transformations</div>
+            <div>End-to-end customer journeys (B2C & B2B)</div>
+            <div>AMPscript & SSJS dynamic personalization</div>
+            <div>Journey Builder multi-step logic and optimization</div>
+            <div>SQL queries, transformations and segmentation</div>
+            <div>Automation Studio scheduled and triggered processing</div>
             <div>REST API integrations and transactional messaging</div>
-            <div>CloudPages and data capture experiences</div>
-            <div>SFMC administration and platform setup</div>
-            <div>Technical design, code reviews and governance</div>
-            <div>Stakeholder collaboration and sprint planning</div>
-            <div>Mentoring, reusable standards and production support</div>
+            <div>Email Studio responsive campaign development</div>
+            <div>CloudPages and landing page solutions</div>
+            <div>Audience segmentation and data management</div>
+            <div>Reporting, analytics and production support</div>
+            <div>Technical design, governance and code reviews</div>
+            <div>Mentoring, stakeholder collaboration and delivery coordination</div>
           </div>
         </div>
 
         <div class="impact-card reveal">
-          <span class="impact-kicker">From Ideas to Impact</span>
-          <h3>Strategy → Build → Automate → Optimize</h3>
-          <div class="impact-path">
-            <div><b>1</b><span>Strategy</span></div>
-            <i></i>
-            <div><b>2</b><span>Build</span></div>
-            <i></i>
-            <div><b>3</b><span>Automate</span></div>
-            <i></i>
-            <div><b>4</b><span>Optimize</span></div>
+          <span>From Ideas</span>
+          <h3>to Impact</h3>
+          <div class="impact-track">
+            <div><b>1</b><span>Strategy</span></div><i></i>
+            <div><b>2</b><span>Build</span></div><i></i>
+            <div><b>3</b><span>Automate</span></div><i></i>
+            <div><b>4</b><span>Optimize</span></div><i></i>
+            <div><b>5</b><span>Grow</span></div>
           </div>
-          <p>Better journeys. Cleaner solutions. Stronger customer experiences.</p>
+          <p>Better journeys. Stronger relationships. Business growth.</p>
         </div>
       </div>
     </section>
 
-    <section class="section soft-section" id="stack">
-      <div class="container stack-grid-wrap">
-        <div class="stack-main reveal">
-          <span class="section-kicker">Tech Stack</span>
+    <section class="section stack" id="stack">
+      <div class="container stack-layout">
+        <div class="stack-copy reveal">
+          <span class="section-label">Tech Stack</span>
           <h2>Tools & Technologies</h2>
-          <p>Core tools I use to deliver scalable Salesforce Marketing Cloud solutions.</p>
-
+          <p>Core technologies I use to design and deliver robust Salesforce Marketing Cloud solutions.</p>
           <div class="stack-pills">
-            <span>Journey Builder</span>
-            <span>Automation Studio</span>
-            <span>Email Studio</span>
-            <span>Contact Builder</span>
-            <span>Mobile Studio</span>
-            <span>Content Builder</span>
-            <span>CloudPages</span>
-            <span>AMPscript</span>
-            <span>SSJS</span>
-            <span>SQL</span>
-            <span>REST API</span>
+            <span>Journey Builder</span><span>Automation Studio</span><span>Email Studio</span>
+            <span>Audience Builder</span><span>AMPscript</span><span>SSJS</span><span>SQL</span>
+            <span>Data Extensions</span><span>CloudPages</span><span>API Integration</span>
+            <span>Content Builder</span><span>Mobile Studio</span><span>Analytics & Reporting</span>
             <span>Marketing Cloud Connect</span>
-            <span>Data Extensions</span>
-            <span>Data Cloud Exposure</span>
-            <span>HTML / CSS / JavaScript</span>
           </div>
         </div>
 
-        <div class="cta-mini reveal">
+        <div class="next-card reveal">
           <span>Let's Build</span>
           <h3>What's Next</h3>
-          <p>Have a project in mind? Let's discuss how SFMC can support your goals.</p>
-          <a href="#contact" class="button button-cyan">Get in Touch</a>
+          <p>Have a project in mind? Let’s discuss how SFMC can help you achieve your goals.</p>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
         </div>
       </div>
     </section>
 
-    <section class="section dark-section" id="contact">
+    <section class="section contact" id="contact">
       <div class="container contact-panel reveal">
         <div>
-          <span class="section-kicker light-kicker">Let's Work Together</span>
+          <span class="section-label light-label">Let's Work Together</span>
           <h2>Have an SFMC requirement in mind?</h2>
-          <p>
-            I can support implementation, enhancement, troubleshooting, integrations,
-            campaign delivery and ongoing technical work.
-          </p>
+          <p>I can support implementation, enhancement, troubleshooting, integrations, campaign delivery and ongoing technical work.</p>
         </div>
-
         <div class="contact-actions">
-          <a href="mailto:rashid.sfconsulting@gmail.com" class="button button-light">Email Me</a>
-          <a href="https://www.linkedin.com/in/md-rashid-anwer-686504100" target="_blank" rel="noopener" class="contact-link">LinkedIn ↗</a>
+          <a href="mailto:rashid.sfconsulting@gmail.com" class="btn btn-light">Email Me</a>
+          <a href="https://www.linkedin.com/in/md-rashid-anwer-686504100" target="_blank" rel="noopener" class="linkedin-link">LinkedIn ↗</a>
         </div>
       </div>
     </section>
@@ -402,15 +262,8 @@ ENDIF
 
   <footer>
     <div class="container footer-wrap">
-      <div>
-        <strong>Rashid Anwer</strong>
-        <span>SFMC Professional</span>
-      </div>
-
-      <div class="footer-words">
-        <span>Build</span><i>•</i><span>Automate</span><i>•</i><span>Personalize</span><i>•</i><span>Grow</span>
-      </div>
-
+      <div><strong>Rashid Anwer</strong><span>SFMC Professional</span></div>
+      <div class="footer-middle"><span>Build</span><i>•</i><span>Automate</span><i>•</i><span>Personalize</span><i>•</i><span>Grow</span></div>
       <small>© <span id="year"></span> Rashid Anwer</small>
     </div>
   </footer>

@@ -1,82 +1,40 @@
-const navToggle = document.getElementById("navToggle");
-const mainNav = document.getElementById("mainNav");
-const mouseGlow = document.getElementById("mouseGlow");
-const journeyScene = document.getElementById("journeyScene");
-const sceneShell = journeyScene?.querySelector(".scene-shell");
+const navToggle=document.getElementById("navToggle");
+const mainNav=document.getElementById("mainNav");
+const cursorGlow=document.getElementById("cursorGlow");
+const heroVisual=document.getElementById("heroVisual");
+const journeyWindow=heroVisual?.querySelector(".journey-window");
 
-navToggle?.addEventListener("click", () => {
-  const isOpen = mainNav.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
+navToggle?.addEventListener("click",()=>{const open=mainNav.classList.toggle("open");navToggle.setAttribute("aria-expanded",String(open));});
+mainNav?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mainNav.classList.remove("open");navToggle.setAttribute("aria-expanded","false");}));
+document.getElementById("year").textContent=new Date().getFullYear();
 
-mainNav?.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    mainNav.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+document.addEventListener("mousemove",e=>{if(!cursorGlow)return;cursorGlow.style.left=e.clientX+"px";cursorGlow.style.top=e.clientY+"px";});
+
+if(heroVisual&&journeyWindow&&window.matchMedia("(pointer:fine)").matches){
+  heroVisual.addEventListener("mousemove",e=>{
+    const r=heroVisual.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    journeyWindow.style.transform=`perspective(1000px) rotateX(${(0.5-y)*5}deg) rotateY(${(x-0.5)*6}deg)`;
   });
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const revealEls = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-revealEls.forEach(el => observer.observe(el));
-
-document.addEventListener("mousemove", e => {
-  if (!mouseGlow) return;
-  mouseGlow.style.left = `${e.clientX}px`;
-  mouseGlow.style.top = `${e.clientY}px`;
-});
-
-if (
-  journeyScene &&
-  sceneShell &&
-  window.matchMedia("(pointer:fine)").matches
-) {
-  journeyScene.addEventListener("mousemove", e => {
-    const rect = journeyScene.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-
-    const rotateY = (x - 0.5) * 6;
-    const rotateX = (0.5 - y) * 5;
-
-    sceneShell.style.transform =
-      `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  journeyScene.addEventListener("mouseleave", () => {
-    sceneShell.style.transform = "";
-  });
+  heroVisual.addEventListener("mouseleave",()=>journeyWindow.style.transform="");
 }
 
-document.querySelectorAll(".tilt").forEach(card => {
-  if (!window.matchMedia("(pointer:fine)").matches) return;
-
-  card.addEventListener("mousemove", e => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-
-    const rx = (0.5 - y) * 5;
-    const ry = (x - 0.5) * 5;
-
-    card.style.transform =
-      `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+document.querySelectorAll(".tilt").forEach(card=>{
+  if(!window.matchMedia("(pointer:fine)").matches)return;
+  card.addEventListener("mousemove",e=>{
+    const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    card.style.transform=`perspective(700px) rotateX(${(0.5-y)*5}deg) rotateY(${(x-0.5)*5}deg) translateY(-4px)`;
   });
+  card.addEventListener("mouseleave",()=>card.style.transform="");
+});
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-  });
+/* Deterrents only — not real source protection. Browser-delivered HTML/CSS/JS can always be inspected. */
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("keydown",e=>{
+  const k=e.key.toLowerCase();
+  if(e.key==="F12" || (e.ctrlKey&&e.shiftKey&&["i","j","c"].includes(k)) || (e.ctrlKey&&k==="u")){
+    e.preventDefault();
+  }
 });
