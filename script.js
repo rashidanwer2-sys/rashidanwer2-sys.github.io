@@ -30,11 +30,11 @@ document.querySelectorAll(".tilt").forEach(card=>{
   card.addEventListener("mouseleave",()=>card.style.transform="");
 });
 
-/* Deterrents only — not real source protection. Browser-delivered HTML/CSS/JS can always be inspected. */
+/* Deterrents only — not real source protection. Browser-delivered HTML/CSS/JS can always be inspected. 
 document.addEventListener("contextmenu",e=>e.preventDefault());
 document.addEventListener("keydown",e=>{
   const k=e.key.toLowerCase();
   if(e.key==="F12" || (e.ctrlKey&&e.shiftKey&&["i","j","c"].includes(k)) || (e.ctrlKey&&k==="u")){
     e.preventDefault();
   }
-});
+}); */
