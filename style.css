@@ -300,10 +300,26 @@ svg {
 }
 
 .hand-note {
+  display: inline-block;
   margin-top: 28px;
   color: #b7edff;
   font-size: 17px;
-  font-style: italic
+  font-style: italic;
+  animation: handNoteFloat 3.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes handNoteFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(83, 216, 255, 0.35);
+  }
 }
 
 .hero-visual {
@@ -311,7 +327,9 @@ svg {
   min-height: 560px;
   display: grid;
   place-items: center;
-  perspective: 1200px
+  perspective: 1200px;
+  animation: handNoteFloat 3.5s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .journey-window {
@@ -682,12 +700,11 @@ svg {
 
 .visual-note {
   position: absolute;
-  right: -20px;
-  bottom: 40px;
+    right: 65px;
+    bottom: 30px;
   color: #72dbff;
   font-size: 13px;
   font-style: italic;
-  transform: rotate(-7deg)
 }
 
 .section {
@@ -767,7 +784,9 @@ svg {
   border-radius: 24px;
   background: #fff;
   border: 1px solid var(--line);
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
+    animation: handNoteFloat 3.5s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .about-card h3 {
@@ -817,7 +836,9 @@ svg {
   text-align: right;
   color: #0d7dce;
   font-size: 13px;
-  font-style: italic
+  font-style: italic;
+    animation: handNoteFloat 3.5s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .section-head {
@@ -910,7 +931,9 @@ svg {
   color: #fff;
   border-radius: 25px;
   background: radial-gradient(circle at 82% 12%, rgba(64, 206, 255, .20), transparent 28%), linear-gradient(150deg, #09244a, #0a376d);
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
+    animation: handNoteFloat 3.5s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .impact-card>span {
@@ -1005,7 +1028,9 @@ svg {
   padding: 30px;
   color: #fff;
   border-radius: 22px;
-  background: radial-gradient(circle at 90% 10%, rgba(69, 206, 255, .22), transparent 30%), linear-gradient(145deg, #08244a, #0a3970)
+  background: radial-gradient(circle at 90% 10%, rgba(69, 206, 255, .22), transparent 30%), linear-gradient(145deg, #08244a, #0a3970);
+    animation: handNoteFloat 3.5s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .next-card>span {
@@ -1079,8 +1104,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding-top: 22px;
-  border-top: 1px solid #deebf5;
+  padding-top: 0px;
   color: #7b92a8;
   font-size: 12px
 }
@@ -1110,41 +1134,6 @@ footer {
   transform: translateY(0)
 }
 
-@keyframes floatA {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(-1deg)
-  }
-
-  50% {
-    transform: translateY(-11px) rotate(1deg)
-  }
-}
-
-@keyframes floatB {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(1deg)
-  }
-
-  50% {
-    transform: translateY(10px) rotate(-1deg)
-  }
-}
-
-@keyframes floatC {
-
-  0%,
-  100% {
-    transform: translateY(0)
-  }
-
-  50% {
-    transform: translateY(-8px)
-  }
-}
 
 @keyframes flow {
   from {
@@ -1156,11 +1145,6 @@ footer {
   }
 }
 
-@keyframes dash {
-  to {
-    stroke-dashoffset: -300
-  }
-}
 
 @keyframes spin {
   to {
